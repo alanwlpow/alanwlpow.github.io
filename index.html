@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+.video-container{
+  width: 100vw;
+  height: 100vh;
+}
+    
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+}
+    
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+}
+
+#text{
+  position: absolute;
+  color: #FFFFFF;
+  left: 50%;
+  top: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+
+</head> 
+<body>
+    <div id="hero">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/xtMTV_ky6BA?autoplay=1&mute=1&playsinline=1&playlist=xtMTV_ky6BA&loop=1" frameborder="0"></iframe>
+
+
+        </div>
+        <div id="text">    
+            <h1>Use a youtube video as a full screen background with CSS</h1>
+          </div> 
+    </div>
+
+</body> 
+</html>
